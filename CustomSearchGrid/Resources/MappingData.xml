@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MapCollection>
+  <GridMap Id="1000" Name="Search Persons" DBInstance="SP_GET_USERS">
+    <Inputs>
+      <Param Name="param1" DefaultValue="100"     Filter="False" />
+      <Param Name="param2" DefaultValue="test"    Filter="True" FilterName="Name"   FilterType="Text"/>
+      <Param Name="param3" DefaultValue="test"    Filter="True" FilterName="Profile"   FilterType="LookUp" FilterValue="LookUp001"/>
+      <Param Name="param4" DefaultValue="test"    Filter="True" FilterName="Gender"   FilterType="LookUp" FilterValue="LookUp002"/>
+    </Inputs>
+    <Outputs MaximumRecords="1000">
+      <Columns ColumnName="ID"	  Name="Id" 		  Width="100" 	Display="Text"	Visible="True" Align="Right" 	  Format=""  Evaluate=""/>
+      <Columns ColumnName="NAME"	Name="Name" 	  Width="300"		Display="Text"	Visible="True" Align="Left" 	  Format=""  Evaluate=""/>
+      <Columns ColumnName="DOB"	  Name="Age" 		  Width="50" 		Display="Text"	Visible="True" Align="Right" 	  Format=""  Evaluate=""/>
+      <Columns ColumnName="SEX"	  Name="Gender" 	Width="50" 		Display="Text"	Visible="True" Align="Middle"   Format=""  Evaluate=""/>
+    </Outputs>
+  </GridMap>
+
+  <GridMap Id="1001" Name="Search Persons" DBInstance="SP_SEARCH_PERSONS">
+    <Inputs>
+      <Param Name="param1" DefaultValue="100" />
+      <Param Name="param2" DefaultValue="test" />
+      <Param Name="param3" DefaultValue="test" />
+    </Inputs>
+    <Outputs MaximumRecords="1000">
+      <Columns ColumnName="ID"	  Name="Id" 		  Width="100" 	Display="Text"	Visible="True" Align="Right" 	  Format=""  Evaluate=""/>
+      <Columns ColumnName="NAME"	Name="Name" 	  Width="300"		Display="Text"	Visible="True" Align="Left" 	  Format=""  Evaluate=""/>
+      <Columns ColumnName="DOB"	  Name="Age" 		  Width="50" 		Display="Text"	Visible="True" Align="Right" 	  Format=""  Evaluate=""/>
+      <Columns ColumnName="SEX"	  Name="Gender" 	Width="50" 		Display="Text"	Visible="True" Align="Middle" 	Format=""  Evaluate=""/>
+    </Outputs>
+  </GridMap>
+
+  <GridMap Id="1002" Name="Search Persons" DBInstance="SP_SEARCH_PERSONS">
+    <Inputs>
+      <Param Name="param1" DefaultValue="100" />
+      <Param Name="param2" DefaultValue="test" />
+      <Param Name="param3" DefaultValue="test" />
+    </Inputs>
+    <Outputs MaximumRecords="1000">
+      <Columns ColumnName="ID"	  Name="Id" 		  Width="100" 	Display="Text"	Visible="True" Align="Right" 	  Format=""  Evaluate=""/>
+      <Columns ColumnName="NAME"	Name="Name" 	  Width="300"		Display="Text"	Visible="True" Align="Left" 	  Format=""  Evaluate=""/>
+      <Columns ColumnName="DOB"	  Name="Age" 		  Width="50" 		Display="Text"	Visible="True" Align="Right" 	  Format=""  Evaluate=""/>
+      <Columns ColumnName="SEX"	  Name="Gender" 	Width="50" 		Display="Text"	Visible="True" Align="Middle" 	Format=""  Evaluate=""/>
+    </Outputs>
+  </GridMap>
+
+  <LookUps>
+    <LookUp Id="LookUp001" Type="Drop">
+      <LookUpItem Text="Manager" Value="001"></LookUpItem>
+      <LookUpItem Text="Asst Manager" Value="002"></LookUpItem>
+      <LookUpItem Text="Seniour" Value="003"></LookUpItem>
+      <LookUpItem Text="Associate" Value="004"></LookUpItem>
+    </LookUp>
+    <LookUp Id="LookUp002" Type="Radio">
+      <LookUpItem Text="Male" Value="M"></LookUpItem>
+      <LookUpItem Text="Female" Value="F"></LookUpItem>
+    </LookUp>
+  </LookUps>
+</MapCollection>
